@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "468321905956",
+    "project_id": "coiffure-app-30090",
+    "storage_bucket": "coiffure-app-30090.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468321905956:android:57d6cbb4b1facf5d5d97b1",
+        "android_client_info": {
+          "package_name": "com.elalami412.mapcoiffureapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJiToQ33kDk3DQy2O5lYqRI-5HOGJnygI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
