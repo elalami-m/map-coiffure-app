@@ -4,9 +4,34 @@ import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import Chatwoot from "./components/Chatwoot";
 import { useEffect, useState } from "react";
+<<<<<<< HEAD
+=======
+import generateNotificationsToken from "./functions/generateNotificationsToken";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { getNotificationPermission } from "./functions/getNotificationPermission";
+>>>>>>> ee1b909890bbc7fc5f81188d878ad29e2caaf415
 import { firebase } from "@react-native-firebase/messaging";
 
 export default function App() {
+
+  // useEffect(() => {
+  //   (async () => {
+  //     const oldToken = await AsyncStorage.getItem("pushNotificationToken");
+  //     const newToken = await generateNotificationsToken();
+
+  //     if (newToken && oldToken !== newToken) {
+  //       console.log(newToken);
+
+  //       setNotificationsToken(newToken);
+  //       AsyncStorage.setItem("pushNotificationToken", newToken);
+  //     } else {
+  //       if (oldToken) {
+  //         console.log(oldToken);
+  //         setNotificationsToken(oldToken);
+  //       }
+  //     }
+  //   })();
+  // }, []);
 
   // useEffect(() => {
   //   (async () => {
@@ -33,6 +58,7 @@ export default function App() {
       try {
         if (await firebase.messaging().requestPermission()) {
           const token = await firebase.messaging().getToken();
+<<<<<<< HEAD
           await fetch(`https://milo.ma/fcm_script/saveToken.php`, {
             method: "POST",
             headers: {
@@ -40,6 +66,9 @@ export default function App() {
             },
             body: JSON.stringify({ fcm_token: token }),
           });
+=======
+          console.log(token);
+>>>>>>> ee1b909890bbc7fc5f81188d878ad29e2caaf415
         }
       } catch (error) {
         console.log(error);
