@@ -12,28 +12,28 @@
       "backgroundColor": "#ffffff"
     },
     "plugins": [
-      [
-        "@sentry/react-native/expo",
-        {
-          "url": "https://sentry.io/",
-          "note": "Use SENTRY_AUTH_TOKEN env to authenticate with Sentry.",
-          "project": "example-project",
-          "organization": "example-org"
-        }
-      ]
+      "@react-native-firebase/app"
     ],
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.elalami412.mapcoiffureapp",
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6ba8c0a7-36bf-469b-8a00-00cbd5702442"
+      }
     }
   }
 }
